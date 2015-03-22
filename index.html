@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.2.25" src="https://code.angularjs.org/1.2.25/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="MainController">
+    <h1>{{message}}</h1>
+    <div>
+      FirstName : {{person.firstName}} 
+    </div>
+    <div>
+      LastName : {{person.lastName}}
+    </div>
+    <div>
+      <img ng-src="{{person.imageSrc}}" alt="{{person.firstName}} {{person.lastName}}"/> 
+    </div>
+    
+    <div> <h1>API'dan angularJS veri cekmek !!!</h1> </div>
+    {{username}}
+    <form name="searchUser" ng-submit="search(username)">
+      <input type="search"required placeholder="user to find"  ng-model="username"/>
+      <input type="submit" value="Search">  <!-- ng-click="search(username)" in order to required 
+      work on the search input this ng-click is removed from submit button ng-submit is put into form -->
+    </form>
+    
+    <div>
+      <h2>{{user1.id}}</h2>
+      
+    </div>
+    
+    
+    <div>{{Error}}</div>
+    <div>
+      <div>user id  : {{user1.id}}   </div>
+       <div>
+        <img ng-src="{{person.imageSrc}}" alt="{{person.firstName}} {{person.lastName}}"/> 
+      </div>
+    </div>
+    <div>
+      <img ng-src="{{user1.avatar_url}}" alt="avatar url"/> 
+    </div>
+  </body>
+
+</html>
